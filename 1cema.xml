@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AccidentFree" id="48070c24-aa74-44c9-9448-059a0bb76aed" formatVersion="1" containerID="03e74c40-cd87-4b00-9226-76468b1282e9" defaultLanguage="Language.English" version="1.1.4" scriptVariant="English">
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AccidentFree" id="48070c24-aa74-44c9-9448-059a0bb76aed" formatVersion="1" containerID="03e74c40-cd87-4b00-9226-76468b1282e9" defaultLanguage="Language.English" version="1.1.2" scriptVariant="English">
 	<synonym>
 		<v8:item>
 			<v8:lang>en</v8:lang>
@@ -67,12 +67,10 @@
 			<v8:content>Ildar Gabdrakhmanov</v8:content>
 		</v8:item>
 	</copyright>
-	<mainModule version="1" startAddr="12">
-		<bsch:cmdOpCode>1,2,18,20,1,1,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
-		<bsch:cmdOperand>4,0,0,0,4,6,1,1,1,6,8,0,0,0</bsch:cmdOperand>
-		<bsch:constant>SSetUpADs</bsch:constant>
+	<mainModule version="1" startAddr="7">
+		<bsch:cmdOpCode>1,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+		<bsch:cmdOperand>3,0,1,1,3,4,0,0,0</bsch:cmdOperand>
 		<bsch:constant>SCommonForm.Desktop</bsch:constant>
-		<bsch:variable name="ADs" isExternal="true"/>
 		<bsch:procedure name="OnStart" parametersCount="0" startAddr="0"/>
 		<bsch:procedure name="OpenForm" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
 	</mainModule>
@@ -1057,43 +1055,6 @@
 		</serverModule>
 		<returnValuesReuse>DuringSession</returnValuesReuse>
 	</commonModule>
-	<commonModule name="ADs" id="97798c20-f122-455c-8d93-7f4078dbd544">
-		<synonym>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>ADs</v8:content>
-			</v8:item>
-		</synonym>
-		<clientModule version="1">
-			<bsch:cmdOpCode>1,2,18,21,5,1,29,40,1,3,4,16,1,2,7,18,20,1,1,2,3,18,20,1,1,2,2,12,18,20,1,39,1,1,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>3,0,0,0,0,3,0,32,5,0,1,0,7,1,0,1,2,7,8,1,0,1,3,8,9,1,2,5,1,4,9,32,11,13,0,0</bsch:cmdOperand>
-			<bsch:constant>SPurchased</bsch:constant>
-			<bsch:constant>Sca-app-pub-9478804610114979/2274430240</bsch:constant>
-			<bsch:constant>SSetUsing</bsch:constant>
-			<bsch:constant>SSetAdBannerID</bsch:constant>
-			<bsch:constant>SSetAdBannerRepresentation</bsch:constant>
-			<bsch:constant>STop</bsch:constant>
-			<bsch:variable name="Store" isExternal="true"/>
-			<bsch:variable name="AdRepresentation" isExternal="true"/>
-			<bsch:variable name="AdBannerRepresentation" isExternal="true"/>
-			<bsch:procedure name="SetUpADs" isExported="true" parametersCount="0" startAddr="0">
-				<bsch:variable name="ADID" isLocal="true"/>
-			</bsch:procedure>
-		</clientModule>
-	</commonModule>
-	<commonModule name="Store" id="03ae73f1-b7d1-49fd-915d-796758973271">
-		<synonym>
-			<v8:item>
-				<v8:lang>en</v8:lang>
-				<v8:content>Store</v8:content>
-			</v8:item>
-		</synonym>
-		<clientModule version="1">
-			<bsch:cmdOpCode>1,6,17,45,39,1,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>3,0,0,0,5,5,0,0</bsch:cmdOperand>
-			<bsch:procedure name="Purchased" isFunction="true" isExported="true" parametersCount="0" startAddr="0"/>
-		</clientModule>
-	</commonModule>
 	<commonForm name="Desktop" id="ba14910b-955a-4058-b3d5-2a4a89784a1c">
 		<synonym>
 			<v8:item>
@@ -1207,9 +1168,9 @@
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 			</mf:serverModule>
-			<mf:clientModule version="1" startAddr="636">
-				<bsch:cmdOpCode>1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,3,6,16,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,7,16,1,3,3,12,4,4,100,16,1,3,3,70,16,1,3,18,19,5,1,4,57,16,1,3,4,16,1,2,12,12,2,12,16,1,3,4,33,40,1,3,4,16,1,2,12,12,2,12,16,39,1,1,2,3,3,18,19,5,1,16,1,22,1,2,2,4,4,4,18,21,5,1,16,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,2,2,4,4,4,18,21,5,1,16,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,3,18,51,16,1,2,18,21,5,1,29,40,1,18,19,1,1,45,39,39,1,44,1,3,2,18,19,5,1,16,1,45,39,1,18,19,1,1,45,39,1,46,1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,6,16,1,2,12,12,6,16,1,3,12,18,19,5,1,40,1,2,3,12,16,1,2,12,12,7,16,1,2,12,12,6,16,39,1,2,4,16,1,2,12,12,6,16,1,3,18,19,5,1,16,1,2,12,12,7,16,1,1,3,3,18,21,5,1,16,1,2,2,4,3,24,4,24,4,3,24,4,24,4,4,3,4,110,100,18,21,5,1,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,22,1,3,7,16,1,6,18,19,1,1,22,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>4,0,0,1,0,0,5,0,2,1,0,0,7,0,12,0,0,1,0,0,13,0,2,1,0,0,14,0,3,1,0,0,16,0,21,1,0,0,23,0,0,1,0,0,24,0,2,1,0,0,25,0,3,1,0,0,27,2,0,4,5,6,0,0,28,2,2,0,0,30,3,0,3,0,30,7,0,0,31,4,8,0,32,0,9,10,1,11,0,33,3,12,0,106,34,4,13,0,35,0,9,10,1,14,0,106,36,38,2,2,4,2,4,0,38,0,40,0,128,3,4,16,17,18,3,15,0,128,0,129,0,19,1,0,0,130,0,20,1,0,0,132,0,137,3,4,21,22,23,3,15,0,137,0,138,0,19,1,0,0,139,0,20,1,0,0,141,0,146,1,0,24,0,148,5,0,25,0,148,0,189,150,0,5,150,152,0,623,189,154,202,158,2,6,1,8,0,158,0,166,1,211,162,0,6,162,164,0,623,166,0,168,0,0,1,0,0,169,0,2,1,0,0,170,0,3,1,0,0,172,0,19,1,0,0,174,2,26,1,9,0,174,261,176,3,2,26,0,177,0,19,1,0,0,178,0,27,1,0,0,284,182,3,6,0,183,0,19,1,0,0,184,1,0,10,0,184,0,185,0,27,1,0,0,187,189,3,1,0,28,0,189,0,191,7,4,29,3,0,30,0,31,3,0,30,0,32,33,3,34,0,0,3,15,0,191,0,193,4,35,0,194,8,4,3,0,333,1,4,35,0,0,334,6,0,195,0,5,4,4,1,36,0,195,0,0,1,4,3,0,0,196,4,7,0,197,9,4,3,0,367,1,4,35,0,0,368,6,0,198,0,5,4,4,1,36,0,198,0,0,1,4,3,0,0,199,4,37,0,200,10,4,3,0,401,1,4,35,0,0,402,6,0,201,0,5,4,4,1,36,0,201,0,0,1,4,3,0,0,202,4,38,0,203,11,4,3,0,435,1,4,35,0,0,436,6,0,204,0,5,4,4,1,36,0,204,0,0,1,4,3,0,0,205,4,39,0,206,12,4,3,0,469,1,4,35,0,0,470,6,0,207,0,5,4,4,1,36,0,207,0,0,1,4,3,0,0,208,4,40,0,209,13,4,3,0,503,1,4,35,0,0,504,6,0,210,0,5,4,4,1,36,0,210,0,0,1,4,3,0,0,211,4,41,0,212,14,4,3,0,537,1,4,35,0,0,538,6,0,213,0,5,4,4,1,36,0,213,0,0,1,4,3,0,0,214,4,42,0,215,15,4,3,0,571,1,4,35,0,0,572,6,0,216,0,5,4,4,1,36,0,216,0,0,1,4,3,0,0,217,4,43,0,218,16,4,3,0,605,1,4,35,0,0,606,6,0,219,0,5,4,4,1,36,0,219,0,0,1,4,3,0,0,221,0,238,0,0,0,239,0,1,12,239,240,0,0,0</bsch:cmdOperand>
+			<mf:clientModule version="1" startAddr="632">
+				<bsch:cmdOpCode>1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,3,6,16,1,2,12,12,6,16,1,2,12,12,6,16,1,2,12,12,7,16,1,3,3,12,4,4,100,16,1,3,3,70,16,1,3,18,19,5,1,4,57,16,1,3,4,16,1,2,12,12,2,12,16,1,3,4,33,40,1,3,4,16,1,2,12,12,2,12,16,39,1,1,2,3,3,18,19,5,1,16,1,22,1,2,2,4,4,4,18,21,5,1,16,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,2,2,4,4,4,18,21,5,1,16,1,2,12,12,7,16,1,2,12,12,6,16,1,22,1,3,18,51,16,1,2,18,21,5,1,29,40,1,18,19,1,1,45,39,39,1,44,1,3,2,18,19,5,1,16,1,45,39,1,18,19,1,1,45,39,1,46,1,2,12,12,6,16,1,2,12,12,7,16,1,2,12,12,6,16,1,2,12,12,6,16,1,3,12,18,19,5,1,40,1,2,3,12,16,1,2,12,12,7,16,1,2,12,12,6,16,39,1,2,4,16,1,2,12,12,6,16,1,3,18,19,5,1,16,1,2,12,12,7,16,1,1,3,3,18,21,5,1,16,1,2,2,4,3,24,4,3,24,4,4,3,4,110,100,18,21,5,1,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,3,4,16,1,2,3,3,38,40,3,3,4,25,13,39,4,16,1,2,4,2,3,18,21,5,1,24,13,12,3,3,38,16,1,22,1,3,7,16,1,6,18,19,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>4,0,0,1,0,0,5,0,2,1,0,0,7,0,12,0,0,1,0,0,13,0,2,1,0,0,14,0,3,1,0,0,16,0,21,1,0,0,23,0,0,1,0,0,24,0,2,1,0,0,25,0,3,1,0,0,27,2,0,4,5,6,0,0,28,2,2,0,0,30,3,0,3,0,30,7,0,0,31,4,8,0,32,0,9,10,1,11,0,33,3,12,0,106,34,4,13,0,35,0,9,10,1,14,0,106,36,38,2,2,4,2,4,0,38,0,40,0,128,3,4,16,17,18,3,15,0,128,0,129,0,19,1,0,0,130,0,20,1,0,0,132,0,137,3,4,21,22,23,3,15,0,137,0,138,0,19,1,0,0,139,0,20,1,0,0,141,0,146,1,0,24,0,148,5,0,25,0,148,0,189,150,0,5,150,152,0,619,189,154,202,158,2,6,1,8,0,158,0,166,1,211,162,0,6,162,164,0,619,166,0,168,0,0,1,0,0,169,0,2,1,0,0,170,0,3,1,0,0,172,0,19,1,0,0,174,2,26,1,9,0,174,261,176,3,2,26,0,177,0,19,1,0,0,178,0,20,1,0,0,284,182,3,6,0,183,0,19,1,0,0,184,1,0,10,0,184,0,185,0,20,1,0,0,187,189,3,1,0,27,0,189,0,191,7,4,28,3,0,29,3,0,30,31,3,32,0,0,3,15,0,191,0,193,4,33,0,194,8,4,3,0,329,1,4,33,0,0,330,6,0,195,0,5,4,4,1,34,0,195,0,0,1,4,3,0,0,196,4,7,0,197,9,4,3,0,363,1,4,33,0,0,364,6,0,198,0,5,4,4,1,34,0,198,0,0,1,4,3,0,0,199,4,35,0,200,10,4,3,0,397,1,4,33,0,0,398,6,0,201,0,5,4,4,1,34,0,201,0,0,1,4,3,0,0,202,4,36,0,203,11,4,3,0,431,1,4,33,0,0,432,6,0,204,0,5,4,4,1,34,0,204,0,0,1,4,3,0,0,205,4,37,0,206,12,4,3,0,465,1,4,33,0,0,466,6,0,207,0,5,4,4,1,34,0,207,0,0,1,4,3,0,0,208,4,38,0,209,13,4,3,0,499,1,4,33,0,0,500,6,0,210,0,5,4,4,1,34,0,210,0,0,1,4,3,0,0,211,4,39,0,212,14,4,3,0,533,1,4,33,0,0,534,6,0,213,0,5,4,4,1,34,0,213,0,0,1,4,3,0,0,214,4,40,0,215,15,4,3,0,567,1,4,33,0,0,568,6,0,216,0,5,4,4,1,34,0,216,0,0,1,4,3,0,0,217,4,41,0,218,16,4,3,0,601,1,4,33,0,0,602,6,0,219,0,5,4,4,1,34,0,219,0,0,1,4,3,0,0,221,0,238,0,0,0,239,0,1,12,239,240,0,0,0</bsch:cmdOperand>
 				<bsch:constant>SGroupVertical</bsch:constant>
 				<bsch:constant>SVisible</bsch:constant>
 				<bsch:constant>SGroupVerticalResult</bsch:constant>
@@ -1237,11 +1198,9 @@
 				<bsch:constant>SArray</bsch:constant>
 				<bsch:constant>SInternetAccess</bsch:constant>
 				<bsch:constant>SError</bsch:constant>
-				<bsch:constant>SGroupStatus</bsch:constant>
 				<bsch:constant>SCount</bsch:constant>
-				<bsch:constant>SAccidents: </bsch:constant>
-				<bsch:constant>S*</bsch:constant>
-				<bsch:constant>SДТП: </bsch:constant>
+				<bsch:constant>S*Accidents: </bsch:constant>
+				<bsch:constant>S*ДТП: </bsch:constant>
 				<bsch:constant>Sالحوادث: 5557*</bsch:constant>
 				<bsch:constant>S5557</bsch:constant>
 				<bsch:constant>SL=ar; ND=10</bsch:constant>
@@ -1303,7 +1262,7 @@
 				<bsch:procedure name="SubmitAtServer" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 				<bsch:procedure name="ValueIsFilled" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 				<bsch:procedure name="GetShortHistory" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
-				<bsch:procedure name="BeforeClose" parametersCount="4" startAddr="625">
+				<bsch:procedure name="BeforeClose" parametersCount="4" startAddr="621">
 					<bsch:variable name="Cancel" isLocal="true" isParam="true"/>
 					<bsch:variable name="Exit" isLocal="true" isParam="true"/>
 					<bsch:variable name="MessageText" isLocal="true" isParam="true"/>
@@ -1742,7 +1701,6 @@
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
 							<mf:inputData>
-								<mf:autoCapitalizationOnTextInput>AllCharacters</mf:autoCapitalizationOnTextInput>
 								<mf:textColor>#C8C8C8</mf:textColor>
 								<mf:font ref="style:NormalTextFont" height="11" kind="StyleItem" scale="100"/>
 								<mf:inputHint>
@@ -1861,7 +1819,6 @@
 							<mf:readOnly>true</mf:readOnly>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
 							<mf:inputData>
-								<mf:textColor>#C8C8C8</mf:textColor>
 								<mf:font ref="style:NormalTextFont" height="11" kind="StyleItem" scale="100"/>
 							</mf:inputData>
 						</mf:field>
@@ -1869,7 +1826,7 @@
 							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:decoration>
 					</mf:group>
-					<mf:group name="GroupStatus" type="UsualGroup">
+					<mf:group name="GroupHorizontal2" type="UsualGroup">
 						<mf:title>
 							<v8:item>
 								<v8:lang>en</v8:lang>
@@ -1888,6 +1845,9 @@
 						<mf:decoration name="Decoration8" type="Label">
 							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:decoration>
+						<mf:field name="status1" kind="InputField" dataPath="status1">
+							<mf:visible>false</mf:visible>
+						</mf:field>
 						<mf:field name="Status" kind="LabelField" dataPath="Status">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:readOnly>true</mf:readOnly>
