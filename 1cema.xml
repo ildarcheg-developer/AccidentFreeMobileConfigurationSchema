@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AccidentFree" id="48070c24-aa74-44c9-9448-059a0bb76aed" formatVersion="1" containerID="03e74c40-cd87-4b00-9226-76468b1282e9" defaultLanguage="Language.English" version="1.1.4" scriptVariant="English">
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AccidentFree" id="48070c24-aa74-44c9-9448-059a0bb76aed" formatVersion="1" containerID="03e74c40-cd87-4b00-9226-76468b1282e9" defaultLanguage="Language.English" version="1.1.5" scriptVariant="English">
 	<synonym>
 		<v8:item>
 			<v8:lang>en</v8:lang>
@@ -1089,9 +1089,16 @@
 			</v8:item>
 		</synonym>
 		<clientModule version="1">
-			<bsch:cmdOpCode>1,6,17,45,39,1,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>3,0,0,0,5,5,0,0</bsch:cmdOperand>
+			<bsch:cmdOpCode>1,2,4,18,21,5,1,17,45,39,1,22,1,2,18,21,5,1,40,1,2,4,6,18,20,1,39,1,2,4,6,18,20,1,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>3,0,1,1,0,0,3,0,0,10,5,0,10,1,0,2,0,10,27,12,0,1,0,2,3,12,34,16,0,1,0,2,3,16,18,21,0,0</bsch:cmdOperand>
+			<bsch:constant>SGetConstantValue</bsch:constant>
+			<bsch:constant>SPurchased</bsch:constant>
+			<bsch:constant>SPurchasesSupported</bsch:constant>
+			<bsch:constant>SSetConstantValue</bsch:constant>
+			<bsch:variable name="CommonUseServerCall" isExternal="true"/>
+			<bsch:variable name="InAppPurchases" isExternal="true"/>
 			<bsch:procedure name="Purchased" isFunction="true" isExported="true" parametersCount="0" startAddr="0"/>
+			<bsch:procedure name="InitializePurchases" isExported="true" parametersCount="0" startAddr="12"/>
 		</clientModule>
 	</commonModule>
 	<commonForm name="Desktop" id="ba14910b-955a-4058-b3d5-2a4a89784a1c">
@@ -2318,6 +2325,30 @@
 		</valueManagerModule>
 		<useStandardCommands>false</useStandardCommands>
 	</constant>
+	<constant name="Purchased" id="39ad1fc5-b134-43aa-939f-3d8e45bd6ea9">
+		<synonym>
+			<v8:item>
+				<v8:lang>en</v8:lang>
+				<v8:content>Purchased</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.Purchased" category="Manager">
+			<xr:TypeId>c85a2a93-7200-43f6-9984-a14d9b17dd84</xr:TypeId>
+			<xr:ValueId>4adacd10-8206-4a16-9d6d-fca7a04670e7</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.Purchased" category="ValueManager">
+			<xr:TypeId>a112b60b-4cc5-473e-9042-24e059049108</xr:TypeId>
+			<xr:ValueId>5d62f463-5671-4355-a34f-906675a5cdec</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:boolean</v8:Type>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
+	</constant>
 	<requiredPermission>
 		<permission>Multimedia</permission>
 		<use>false</use>
@@ -2352,6 +2383,6 @@
 	</requiredPermission>
 	<requiredPermission>
 		<permission>InAppPurchases</permission>
-		<use>false</use>
+		<use>true</use>
 	</requiredPermission>
 </MobileApp>
